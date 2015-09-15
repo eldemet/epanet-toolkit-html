@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>ENusehydfile</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Functions">
+<object id=hhctrl_1 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Main"><param name="Item1" value=""><param name="Item2" value="$topicid_Hydraulics_File"></object></head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>ENusehydfile</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Declaration:</b>
+<br>
+
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="254">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">int  ENusehydfile( char* fname )
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Description:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Uses the contents of the specified file as the current binary <a href=javascript:hhctrl_1.hhclick()>hydraulics file</a>.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Arguments:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>fname:</i>
+<br>
+</span></td><td align="left" valign="top" width="281">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">name of the file containing hydraulic analysis results for the current network.
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Returns:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Returns an error code.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Notes:
+<br>
+</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Call this function to refuse a set of hydraulic analysis results saved previously. These results are checked to see if they match the following the parameters associated with the current network being analyzed: number of nodes, number of tanks and reservoirs, number of links, number of pumps, number of valves, and simulation duration.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Do not call this function when the hydraulics analysis system is still opened (i.e., <a href=enopenh.htm>ENopenH</a> has been called but <a href=encloseh.htm>ENcloseH</a> has not).<b>
+&nbsp;<br>
+</b></span></td></tr></table></b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><b></b></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>See Also:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=ensavehydfile.htm>ENsavehydfile</a>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Writing a Report</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Writing a Report">
+
+   <style type="text/css">
+	a:link { color: #002682 }
+	a:hover { color: #FF0000; }
+	a:visited { color: #D63078 }
+   </style>
+
+<!-- This style sheet goes into compiled HTML HELP -->
+   <style type="text/css" media="screen">
+	#nsr
+	 {
+	 padding: 6px 6px 0px 6px;
+	 border-bottom: none;
+	 background: #649CCC;
+	 vertical-align: top;
+	 z-index: 2;
+	 visibility: visible;
+	 left: 0;
+	 top: 0;
+	 position: absolute;
+	 width: 100%;
+	 }
+	#mainbody
+	 {
+	 left: 0;
+	 top: 0px;
+	 margin: 0;
+	 position: absolute;
+	 padding: 10px;
+	 overflow: auto;
+	 height: 100%;
+	 z-index: 1;
+	 background-repeat: no-repeat;
+	 background-position: bottom right;
+	 background-attachment: fixed;
+	 }
+   </style>
+   <style type="text/css" media="print">
+	#nsr
+	 { visibility: none; }
+	#mainbody
+	 { overflow: visible; }
+   </style>
+   <script type="text/javascript" language="JavaScript" src="nonscroll.js"></script>
+
+
+
+<object id=hhctrl_1 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Auxilary"><param name="Item1" value=""><param name="Item2" value="$topicid_ENsetreport"></object><object id=hhctrl_2 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Auxilary"><param name="Item1" value=""><param name="Item2" value="$topicid_ENreport"></object></head>
+<body bgcolor="#FFFFFF" 
+ marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"
+ scroll="no"
+>
+
+
+<div id="nsr">
+<table width="100%" border="0" cellspacing="0" cellpadding="2"
+ bgcolor="#649CCC">
+  <tr valign="top">
+    <td align="left">
+      
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#FFFFFF"><b>Writing a Report
+<br>
+</b></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="welcome.htm"
+        onmouseover="document.images.main.src='button_main_h.gif'" 
+  	onmouseout="document.images.main.src='button_main.gif'">
+        <img name=main src="button_main.gif" border=0 alt="Return to Introduction"></a>&nbsp;
+     <a href="retrieving_computed_results.htm"
+        onmouseover="document.images.prev.src='button_prev_h.gif'" 
+  	onmouseout="document.images.prev.src='button_prev.gif'"><img name=prev src="button_prev.gif" border=0 alt="Previous page"></a>&nbsp;
+     
+
+     <a href="example_applications.htm"
+        onmouseover="document.images.next.src='button_next_h.gif'" 
+  	onmouseout="document.images.next.src='button_next.gif'"><img name=next src="button_next.gif" border=0 alt="Next page"></a>
+     
+     </font>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+<div id="mainbody">
+
+<span style="font-family:Verdana; font-size:10pt; color:#000000">The Toolkit has some built-in capabilities to produce formatted output results saved to a file. More specialized reporting needs can always be handled by writing specialized code.
+<br>
+
+<br>
+The <a href=javascript:hhctrl_1.hhclick()>ENsetreport</a> function is used to define the format of a report while the <a href=javascript:hhctrl_2.hhclick()>ENreport</a> function actually writes the report. The latter should be called only after a hydraulic or water quality analysis has been made. An example of creating a report that lists all nodes where the pressure variation over the duration of the simulation exceeds 20 psi is shown below:
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">/*&nbsp;Compute&nbsp;ranges&nbsp;(max&nbsp;-&nbsp;min)&nbsp;*/
+<br>
+ENsettimeparam(EN_STATISTIC,&nbsp;EN_RANGE);
+<br>
+
+<br>
+/*&nbsp;Solve&nbsp;hydraulics&nbsp;*/
+<br>
+ENsolveH();
+<br>
+ENsaveH();
+<br>
+
+<br>
+/*&nbsp;Define&nbsp;contents&nbsp;of&nbsp;the&nbsp;report&nbsp;*/
+<br>
+ENresetreport();
+<br>
+ENsetreport("FILE&nbsp;myfile.rpt");
+<br>
+ENsetreport("NODES&nbsp;ALL");
+<br>
+ENsetreport("PRESSURE&nbsp;PRECISION&nbsp;1");
+<br>
+ENsetreport("PRESSURE&nbsp;ABOVE&nbsp;20");
+<br>
+
+<br>
+/*&nbsp;Write&nbsp;the&nbsp;report&nbsp;to&nbsp;file&nbsp;*/
+<br>
+ENreport();</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+</span></span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[JUNCTIONS]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[JUNCTIONS]
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Defines junction nodes contained in the network.
+<br>
+
+<br>
+<b>Format:</b>
+<br>
+One line for each junction containing:
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">ID label
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Elevation, ft (m)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Base demand flow (flow units) (optional)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Demand pattern ID (optional)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Remarks:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">1.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">A [JUNCTIONS] section with at least one junction is required.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If no demand pattern is supplied then the junction demand follows the Default Demand Pattern provided in the [OPTIONS] section, or Pattern 1 if no Default Pattern is specified. If the Default Pattern (or Pattern 1) does not exist, then the demand remains constant.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">3.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Demands can also be entered in the [DEMANDS] section and include multiple demand categories per junction.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Example:</b>
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">[JUNCTIONS]&nbsp;&nbsp;&nbsp;
+<br>
+;ID&nbsp;&nbsp;&nbsp;&nbsp;Elev.&nbsp;&nbsp;&nbsp;Demand&nbsp;&nbsp;&nbsp;Pattern&nbsp;&nbsp;&nbsp;
+<br>
+;------------------------------&nbsp;&nbsp;&nbsp;
+<br>
+J1&nbsp;&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pat1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+J2&nbsp;&nbsp;&nbsp;&nbsp;120&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Uses&nbsp;default&nbsp;demand&nbsp;pattern&nbsp;&nbsp;&nbsp;
+<br>
+J3&nbsp;&nbsp;&nbsp;&nbsp;115&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;No&nbsp;demand&nbsp;at&nbsp;this&nbsp;junction&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+</span></span>
+
+</body>
+</html>

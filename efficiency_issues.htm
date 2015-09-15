@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Efficiency Issues</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Efficiency Issues">
+
+   <style type="text/css">
+	a:link { color: #002682 }
+	a:hover { color: #FF0000; }
+	a:visited { color: #D63078 }
+   </style>
+
+<!-- This style sheet goes into compiled HTML HELP -->
+   <style type="text/css" media="screen">
+	#nsr
+	 {
+	 padding: 6px 6px 0px 6px;
+	 border-bottom: none;
+	 background: #649CCC;
+	 vertical-align: top;
+	 z-index: 2;
+	 visibility: visible;
+	 left: 0;
+	 top: 0;
+	 position: absolute;
+	 width: 100%;
+	 }
+	#mainbody
+	 {
+	 left: 0;
+	 top: 0px;
+	 margin: 0;
+	 position: absolute;
+	 padding: 10px;
+	 overflow: auto;
+	 height: 100%;
+	 z-index: 1;
+	 background-repeat: no-repeat;
+	 background-position: bottom right;
+	 background-attachment: fixed;
+	 }
+   </style>
+   <style type="text/css" media="print">
+	#nsr
+	 { visibility: none; }
+	#mainbody
+	 { overflow: visible; }
+   </style>
+   <script type="text/javascript" language="JavaScript" src="nonscroll.js"></script>
+
+
+
+</head>
+<body bgcolor="#FFFFFF" 
+ marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"
+ scroll="no"
+>
+
+
+<div id="nsr">
+<table width="100%" border="0" cellspacing="0" cellpadding="2"
+ bgcolor="#649CCC">
+  <tr valign="top">
+    <td align="left">
+      
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#FFFFFF"><b>Efficiency Issues</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="welcome.htm"
+        onmouseover="document.images.main.src='button_main_h.gif'" 
+  	onmouseout="document.images.main.src='button_main.gif'">
+        <img name=main src="button_main.gif" border=0 alt="Return to Introduction"></a>&nbsp;
+     <a href="example_3.htm"
+        onmouseover="document.images.prev.src='button_prev_h.gif'" 
+  	onmouseout="document.images.prev.src='button_prev.gif'"><img name=prev src="button_prev.gif" border=0 alt="Previous page"></a>&nbsp;
+     
+
+     <a href="toolkit_functions_by_task.htm"
+        onmouseover="document.images.next.src='button_next_h.gif'" 
+  	onmouseout="document.images.next.src='button_next.gif'"><img name=next src="button_next.gif" border=0 alt="Next page"></a>
+     
+     </font>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+<div id="mainbody">
+
+<span style="font-family:Verdana; font-size:10pt; color:#000000">When making multiple hydraulic analyses on the same network (as would be done in an optimization procedure), do not use repeated calls to <i>ENsolveH</i>. Instead, use an iterated <i>ENrunH</i> - <i>ENnextH</i> loop as shown below:
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">int&nbsp;stop;
+<br>
+long&nbsp;t,&nbsp;tstep;
+<br>
+ENopenH();
+<br>
+stop&nbsp;=&nbsp;0;
+<br>
+do&nbsp;{
+<br>
+&nbsp;&nbsp;setparams();
+<br>
+&nbsp;&nbsp;ENinitH(0);
+<br>
+&nbsp;&nbsp;do&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ENrunH(&amp;t);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;evalresults(t,&nbsp;&amp;stop);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ENnextH(&amp;tstep);
+<br>
+&nbsp;&nbsp;}&nbsp;while&nbsp;(tstep&nbsp;&gt;&nbsp;0&nbsp;&amp;&amp;&nbsp;!stop);
+<br>
+}&nbsp;while&nbsp;(!stop);
+<br>
+ENcloseH();</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+In the code above, <i>setparams()</i> would be a user-defined function which modifies the network in same manner from one iteration to the next. Another user-defined function, <i>evalresults()</i>, would evaluate the results at time t and set the value of a stop flag that signals the end of the iterations. Note that the argument passed to <i>ENinitH()</i> is 0, indicating that there is no need to save hydraulic results to file since they are being used directly as they are generated. This will also speed up the computations.
+<br>
+
+<br>
+When there is a need to make repeated water quality runs using the same hydraulics, then call <i>ENsolveH</i> once to generate and save the hydraulic solution and use code similar to that above for the water quality runs (using the <i>ENopenQ</i>, <i>ENinitQ</i>, <i>ENrunQ</i>, <i>ENnextQ</i>, and <i>ENcloseQ </i>functions instead).
+<br>
+</span></span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>ENepanet</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Functions">
+<object id=hhctrl_1 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Main"><param name="Item1" value=""><param name="Item2" value="$topicid_Input_File"></object><object id=hhctrl_2 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Main"><param name="Item1" value=""><param name="Item2" value="$topicid_Report_File"></object><object id=hhctrl_3 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Main"><param name="Item1" value=""><param name="Item2" value="$topicid_Output_File"></object></head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>ENepanet
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Declaration:
+<br>
+</b>
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="430">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">int  ENepanet( char* f1, char* f2, char* f3, void (*) (vfunc) )
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Description:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Runs a complete EPANET simulation.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Arguments:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>f1:</i> 
+<br>
+</span></td><td align="left" valign="top" width="352">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">name of the <a href=javascript:hhctrl_1.hhclick()>input file</a>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>f2:</i>  
+<br>
+</span></td><td align="left" valign="top" width="352">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">name of an output <a href=javascript:hhctrl_2.hhclick()>report file</a>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>f3:</i>  
+<br>
+</span></td><td align="left" valign="top" width="352">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">name of an optional binary <a href=javascript:hhctrl_3.hhclick()>output file</a>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>vfunc:</i> 
+<br>
+</span></td><td align="left" valign="top" width="352">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">pointer to a user-supplied function which accepts a character string as its argument.
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Returns:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Returns an error code.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Notes:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">ENepanet is a stand-alone function and does not interact with any of the other functions in the toolkit.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If there is no need to save EPANET's binary output file then <i>f3</i> can be an empty string (""). 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The <i>vfunc</i> function pointer allows the calling program to display a progress message generated by EPANET during its computations. A typical function for a console application might look as follows:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">void&nbsp;&nbsp;writecon(char&nbsp;*s)</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">{</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;puts(s);
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Courier New; font-size:10pt; color:#000000">}<span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">and somewhere in the calling program the following declarations would appear:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">void&nbsp;(*&nbsp;vfunc)&nbsp;(char&nbsp;*);
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Courier New; font-size:10pt; color:#000000">vfunc&nbsp;=&nbsp;writecon;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Courier New; font-size:10pt; color:#000000">ENepanet(f1,f2,f3,vfunc);<span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If such a function is not desired then this argument should be <i>NULL</i> (<i>NIL</i> for Delphi/Pascal, <i>VBNULLSTRING</i> for Visual Basic). 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">ENepanet is used mainly to link the EPANET engine to third-party user interfaces that build network input files and display the results of a network analysis.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table>
+
+</body>
+</html>

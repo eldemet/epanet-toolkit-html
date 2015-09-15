@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Data Flow Diagram</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Data Flow Diagram">
+
+   <style type="text/css">
+	a:link { color: #002682 }
+	a:hover { color: #FF0000; }
+	a:visited { color: #D63078 }
+   </style>
+
+<!-- This style sheet goes into compiled HTML HELP -->
+   <style type="text/css" media="screen">
+	#nsr
+	 {
+	 padding: 6px 6px 0px 6px;
+	 border-bottom: none;
+	 background: #649CCC;
+	 vertical-align: top;
+	 z-index: 2;
+	 visibility: visible;
+	 left: 0;
+	 top: 0;
+	 position: absolute;
+	 width: 100%;
+	 }
+	#mainbody
+	 {
+	 left: 0;
+	 top: 0px;
+	 margin: 0;
+	 position: absolute;
+	 padding: 10px;
+	 overflow: auto;
+	 height: 100%;
+	 z-index: 1;
+	 background-repeat: no-repeat;
+	 background-position: bottom right;
+	 background-attachment: fixed;
+	 }
+   </style>
+   <style type="text/css" media="print">
+	#nsr
+	 { visibility: none; }
+	#mainbody
+	 { overflow: visible; }
+   </style>
+   <script type="text/javascript" language="JavaScript" src="nonscroll.js"></script>
+
+
+
+</head>
+<body bgcolor="#FFFFFF" 
+ marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"
+ scroll="no"
+>
+
+
+<div id="nsr">
+<table width="100%" border="0" cellspacing="0" cellpadding="2"
+ bgcolor="#649CCC">
+  <tr valign="top">
+    <td align="left">
+      
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#FFFFFF"><b>Data Flow Diagram</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="welcome.htm"
+        onmouseover="document.images.main.src='button_main_h.gif'" 
+  	onmouseout="document.images.main.src='button_main.gif'">
+        <img name=main src="button_main.gif" border=0 alt="Return to Introduction"></a>&nbsp;
+     <a href="toolkit_overview.htm"
+        onmouseover="document.images.prev.src='button_prev_h.gif'" 
+  	onmouseout="document.images.prev.src='button_prev.gif'"><img name=prev src="button_prev.gif" border=0 alt="Previous page"></a>&nbsp;
+     
+
+     <a href="how_to_use_the_toolkit.htm"
+        onmouseover="document.images.next.src='button_next_h.gif'" 
+  	onmouseout="document.images.next.src='button_next.gif'"><img name=next src="button_next.gif" border=0 alt="Next page"></a>
+     
+     </font>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+<div id="mainbody">
+
+<span style="font-family:Verdana; font-size:10pt; color:#000000">The EPANET Toolkit is written in ANSI standard C with separate code modules for input processing, hydraulic analysis, water quality analysis, sparse matrix/linear equation analysis, and report generation. The data flow diagram for analyzing a pipe network is shown below. The processing steps depicted in this diagram can be summarized as follows:
+<br>
+
+<br>
+<span style="font-family:Times New Roman; font-size:10pt; color:#000000"><img src="dataflow.gif" width="400" height="394" border="0" alt="dataflow">
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The input processor module receives a description of the network being simulated from an external <span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"><a href=input_file.htm>input file</a></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (.INP). The file's contents are parsed, interpreted, and stored in a shared memory area.</span><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:5pt; color:#000000"> 
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:5pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The hydraulics solver module carries out an extended period hydraulic simulation. The results obtained at every time step can be written to an external, unformatted (binary) <a href=hydraulics_file.htm>hydraulics file</a> (.HYD). Some of these time steps might represent intermediate points in time where system conditions change because of tanks becoming full or empty or pumps turning on or off due to level controls or timed operation.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:5pt; color:#000000"> 
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:5pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If a water quality simulation is requested, the water quality module accesses the flow data from the hydraulics file as it computes substance transport and reaction throughout the network over each hydraulic time step. During this process it can write both the formerly computed hydraulic results as well as its water quality results for each preset reporting interval to an unformatted (binary) <a href=output_file.htm>output file</a> (.OUT). If no water quality analysis was called for, then the hydraulic results stored in the .HYD file can simply be written out to the binary output file at uniform reporting intervals.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:5pt; color:#000000"> 
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:5pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If requested, a report writer module reads back the computed simulation results from the binary output file (.OUT) for each reporting period and writes out selected values to a formatted <a href=report_file.htm>report file</a> (.RPT). Any error or warning messages generated during the run are also written to this file.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+Toolkit functions exist to carry out all of these steps under the programmer's control, including the ability to read or modify most of the system's global data..
+<br>
+</span>
+</div>
+
+</body>
+</html>

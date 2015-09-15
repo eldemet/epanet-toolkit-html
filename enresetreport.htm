@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>ENresetreport</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Functions">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>ENresetreport</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Declaration:</b>
+<br>
+
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="201">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">int  ENresetreport( void )
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Description:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Clears any report formatting commands that either appeared in the <a href=_report_.htm>[REPORT]</a> section of the EPANET Input file or were issued with the <a href=ensetreport.htm>ENsetreport</a> function.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Returns:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Returns an error code.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Notes:
+<br>
+</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">After calling this function the default reporting options are in effect. These are:<b>
+&nbsp;<br>
+</b></span></td></tr></table></b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><b></b></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">No status report
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">No energy report
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">No nodes reported on
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">No links reported on
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Node variables reported to 2 decimal places
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Link variables reported to 2 decimal places (3 for friction factor)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Node variables reported are elevation, head, pressure, and quality
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Link variables reported are flow, velocity, and head loss
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>See Also:</b>
+<br>
+<b>
+<br>
+</b></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=enreport.htm>ENreport</a>, <a href=ensetreport.htm>ENsetreport</a>, <a href=ensetstatusreport.htm>ENsetstatusreport</a><b>
+&nbsp;<br>
+</b></span></td></tr></table></b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><b></b></span></td></tr></table>
+
+</body>
+</html>

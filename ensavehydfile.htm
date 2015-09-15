@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>ENsavehydfile</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Functions">
+<object id=hhctrl_1 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="Main"><param name="Item1" value=""><param name="Item2" value="$topicid_Hydraulics_File"></object></head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>ENsavehydfile</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Declaration:</b>
+<br>
+
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="252">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">int  ENsavehydfile( char* fname )
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Description:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Saves the current contents of the binary <a href=javascript:hhctrl_1.hhclick()>hydraulics file</a> to a file.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Arguments:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>fname:</i>
+<br>
+</span></td><td align="left" valign="top" width="263">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">name of the file where the hydraulics results should be saved.
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Returns:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Returns an error code.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Notes:
+<br>
+</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Use this function to save the current set of hydraulics results to a file, either for post-processing or to be used at a later time by calling the <a href=enusehydfile.htm>ENusehydfile</a> function.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The hydraulics file contains nodal demands and heads and link flows, status, and settings for all hydraulic time steps, even intermediate ones.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Before calling this function hydraulic results must have been generated and saved by having called <a href=ensolveh.htm>ENsolveH</a> or the <a href=eninith.htm>ENinitH</a> - <a href=enrunh.htm>ENrunH</a> - <a href=ennexth.htm>ENnextH</a> sequence with the saveflag parameter of ENinitH set to 1.<b>
+&nbsp;<br>
+</b></span></td></tr></table></b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><b></b></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>See Also:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=enusehydfile.htm>ENusehydfile,</a> <a href=ensolveh.htm>ENsolveH,</a> <a href=eninith.htm>ENinitH</a>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table>
+
+</body>
+</html>

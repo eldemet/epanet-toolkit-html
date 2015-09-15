@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[ENERGY]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[ENERGY]
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Defines parameters used to compute pumping energy and cost.
+<br>
+
+<br>
+<b>Formats:
+<br>
+</b></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>GLOBAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRICE/PATTERN/EFFIC&nbsp;&nbsp;</b><i>value
+<br>
+</i><b>PUMP&nbsp;&nbsp;&nbsp;</b><i>PumpID</i><b>&nbsp;&nbsp;PRICE/PATTERN/EFFIC&nbsp;&nbsp;</b><i>value
+<br>
+</i><b>DEMAND&nbsp;CHARGE&nbsp;&nbsp;</b><i>value</i></span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+<b>Remarks:</b>
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">1.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">First format is used to set global default values of energy price, price pattern, and pumping efficiency for all pumps.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Second format is used to override global defaults for specific pumps.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">3.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Parameters are defined as follows:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>PRICE</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> = average cost per kW-hour,
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>PATTERN</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> = ID label of time pattern describing how energy price varies with time,
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>EFFIC</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> = either a single percent efficiency for global setting or the ID label of an efficiency curve for a specific pump,
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>DEMAND&nbsp;CHARGE</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> = added cost per maximum kW usage during the simulation period.
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">4.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The default global pump efficiency is 75% and the default global energy price is 0.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">5.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">All entries in this section are optional. Items offset by slashes (/) indicate allowable choices.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Example:</b>
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">[ENERGY]</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;&nbsp;
+<br>
+</b></span><span style="font-family:Courier New; font-size:10pt; color:#000000">GLOBAL&nbsp;PRICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.05&nbsp;&nbsp;&nbsp;;Sets&nbsp;global&nbsp;energy&nbsp;price</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;&nbsp;
+<br>
+</b></span><span style="font-family:Courier New; font-size:10pt; color:#000000">GLOBAL&nbsp;PATTERN&nbsp;&nbsp;&nbsp;&nbsp;PAT1&nbsp;&nbsp;&nbsp;;and&nbsp;time-of-day&nbsp;pattern</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;&nbsp;
+<br>
+</b></span><span style="font-family:Courier New; font-size:10pt; color:#000000">PUMP&nbsp;&nbsp;&nbsp;23&nbsp;&nbsp;PRICE&nbsp;&nbsp;0.10&nbsp;&nbsp;&nbsp;;Overrides&nbsp;price&nbsp;for&nbsp;Pump&nbsp;23</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;&nbsp;
+<br>
+</b></span><span style="font-family:Courier New; font-size:10pt; color:#000000">PUMP&nbsp;&nbsp;&nbsp;23&nbsp;&nbsp;EFFIC&nbsp;&nbsp;E23&nbsp;&nbsp;&nbsp;&nbsp;;Assigns&nbsp;effic.&nbsp;curve&nbsp;to&nbsp;Pump&nbsp;23</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+</b></span></span>
+
+</body>
+</html>

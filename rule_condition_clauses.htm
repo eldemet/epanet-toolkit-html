@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Rule Condition Clauses</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>Rule Condition Clauses
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+A condition clause in a <a href=_rules_.htm>Rule-Based Control</a> takes the form of:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>object&nbsp;id&nbsp;attribute&nbsp;relation&nbsp;value</i></span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+where
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>object</i>&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a category of network object
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>id</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">the object's ID label
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>attribute</i>&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">an attribute or property of the object
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>relation</i>&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a relational operator
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>value</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">an attribute value &nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+Some example conditional clauses are:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;JUNCTION&nbsp;23&nbsp;PRESSURE&nbsp;&gt;&nbsp;20
+<br>
+&nbsp;&nbsp;TANK&nbsp;T200&nbsp;FILLTIME&nbsp;BELOW&nbsp;3.5
+<br>
+&nbsp;&nbsp;LINK&nbsp;44&nbsp;STATUS&nbsp;IS&nbsp;OPEN
+<br>
+&nbsp;&nbsp;SYSTEM&nbsp;DEMAND&nbsp;&gt;=&nbsp;1500
+<br>
+&nbsp;&nbsp;SYSTEM&nbsp;CLOCKTIME&nbsp;=&nbsp;7:30&nbsp;AM</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+Objects can be any of the following keywords:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;NODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINK&nbsp;&nbsp;&nbsp;SYSTEM
+<br>
+&nbsp;&nbsp;JUNCTION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PIPE
+<br>
+&nbsp;&nbsp;RESERVOIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUMP
+<br>
+&nbsp;&nbsp;TANK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VALVE</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+When </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SYSTEM</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> is used in a condition no ID is supplied.
+<br>
+
+<br>
+The following attributes can be used with Node-type objects:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;DEMAND
+<br>
+&nbsp;&nbsp;HEAD
+<br>
+&nbsp;&nbsp;PRESSURE</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+
+<br>
+The following attributes can be used with Tanks:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;LEVEL</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;FILLTIME</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (hours needed to fill a tank)
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;DRAINTIME</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (hours needed to empty a tank)
+<br>
+
+<br>
+These attributes can be used with Link-Type objects:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;FLOW</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;STATUS&nbsp;(OPEN,&nbsp;CLOSED,&nbsp;or&nbsp;ACTIVE)</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;SETTING</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (pump speed or valve setting)
+<br>
+
+<br>
+The </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SYSTEM</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> object can use the following attributes:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;DEMAND</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (total system demand)
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;TIME</span><span style="font-family:Verdana; font-size:10pt; color:#000000">    (hours from the start of the simulation expressed
+<br>
+               either as a decimal number or in hours:minutes format)
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;CLOCKTIME</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (24-hour clock time with AM or PM appended)
+<br>
+
+<br>
+Relation operators consist of the following:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;IS
+<br>
+&nbsp;&nbsp;&lt;&gt;&nbsp;&nbsp;&nbsp;NOT
+<br>
+&nbsp;&nbsp;&lt;&nbsp;&nbsp;&nbsp;BELOW
+<br>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;ABOVE
+<br>
+&nbsp;&nbsp;&lt;=
+<br>
+&nbsp;&nbsp;&gt;=</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span>
+
+</body>
+</html>

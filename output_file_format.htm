@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Output File Format</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+
+   <style type="text/css">
+	a:link { color: #002682 }
+	a:hover { color: #FF0000; }
+	a:visited { color: #D63078 }
+   </style>
+
+<!-- This style sheet goes into compiled HTML HELP -->
+   <style type="text/css" media="screen">
+	#nsr
+	 {
+	 padding: 6px 6px 0px 6px;
+	 border-bottom: none;
+	 background: #649CCC;
+	 vertical-align: top;
+	 z-index: 2;
+	 visibility: visible;
+	 left: 0;
+	 top: 0;
+	 position: absolute;
+	 width: 100%;
+	 }
+	#mainbody
+	 {
+	 left: 0;
+	 top: 0px;
+	 margin: 0;
+	 position: absolute;
+	 padding: 10px;
+	 overflow: auto;
+	 height: 100%;
+	 z-index: 1;
+	 background-repeat: no-repeat;
+	 background-position: bottom right;
+	 background-attachment: fixed;
+	 }
+   </style>
+   <style type="text/css" media="print">
+	#nsr
+	 { visibility: none; }
+	#mainbody
+	 { overflow: visible; }
+   </style>
+   <script type="text/javascript" language="JavaScript" src="nonscroll.js"></script>
+
+
+
+</head>
+<body bgcolor="#FFFFFF" 
+ marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"
+ scroll="no"
+>
+
+
+<div id="nsr">
+<table width="100%" border="0" cellspacing="0" cellpadding="2"
+ bgcolor="#649CCC">
+  <tr valign="top">
+    <td align="left">
+      
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#FFFFFF"><b>Output File Format</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="welcome.htm"
+        onmouseover="document.images.main.src='button_main_h.gif'" 
+  	onmouseout="document.images.main.src='button_main.gif'">
+        <img name=main src="button_main.gif" border=0 alt="Return to Introduction"></a>&nbsp;
+     <a href="input_file_format.htm"
+        onmouseover="document.images.prev.src='button_prev_h.gif'" 
+  	onmouseout="document.images.prev.src='button_prev.gif'"><img name=prev src="button_prev.gif" border=0 alt="Previous page"></a>&nbsp;
+     
+
+     <a href="output_file___prolog.htm"
+        onmouseover="document.images.next.src='button_next_h.gif'" 
+  	onmouseout="document.images.next.src='button_next.gif'"><img name=next src="button_next.gif" border=0 alt="Next page"></a>
+     
+     </font>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+<div id="mainbody">
+
+<span style="font-family:Verdana; font-size:10pt; color:#000000">The Toolkit uses an unformatted binary output file to store both hydraulic and water quality results at uniform reporting intervals. Data written to the file is either 4-byte integers, 4-byte floats, or fixed-size strings whose size is a multiple of 4 bytes. This allows the file to be divided conveniently into 4-byte records. The file consists of four sections of the following sizes in bytes:
+<br>
+
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="146">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Section</b>
+<br>
+</span></td><td align="left" valign="top" width="291">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Size in Bytes</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="146">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=output_file___prolog.htm>Prolog</a>
+<br>
+</span></td><td align="left" valign="top" width="291">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">884 + 36*Nnodes + 52*Nlinks + 8*Ntanks
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="146">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=output_file___energy_use.htm>Energy Use</a>
+<br>
+</span></td><td align="left" valign="top" width="291">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">28*Npumps + 4
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="146">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=output_file___dynamic_results.htm>Dynamic Results</a>
+<br>
+</span></td><td align="left" valign="top" width="291">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">(16*Nnodes + 32*Nlinks)*Nperiods
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="146">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=output_file___epilog.htm>Epilog</a>
+<br>
+</span></td><td align="left" valign="top" width="291">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">28
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;
+<br>
+where
+<br>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="75">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Nnodes
+<br>
+</span></td><td align="left" valign="top" width="18">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">=
+<br>
+</span></td><td align="left" valign="top" width="343">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">number of nodes (junctions + reservoirs + tanks)
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="75">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Nlinks
+<br>
+</span></td><td align="left" valign="top" width="18">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">=
+<br>
+</span></td><td align="left" valign="top" width="343">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">number of links (pipes + pumps + valves)
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="75">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Ntanks
+<br>
+</span></td><td align="left" valign="top" width="18">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">=
+<br>
+</span></td><td align="left" valign="top" width="343">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">number of tanks and reservoirs
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="75">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Npumps
+<br>
+</span></td><td align="left" valign="top" width="18">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">=
+<br>
+</span></td><td align="left" valign="top" width="343">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">number of pumps
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="75">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Nperiods
+<br>
+</span></td><td align="left" valign="top" width="18">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">=
+<br>
+</span></td><td align="left" valign="top" width="343">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">number of reporting periods
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;
+<br>
+and all of these counts are themselves written to the file's prolog or epilog sections. 
+<br>
+</span>
+</div>
+
+</body>
+</html>

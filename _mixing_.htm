@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[MIXING]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[MIXING]</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Identifies the model that governs mixing within storage tanks.
+<br>
+
+<br>
+<b>Format:</b>
+<br>
+One line per tank containing:
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Tank ID label
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Mixing model (<span style="font-family:Courier New; font-size:10pt; color:#000000"><b>MIXED,&nbsp;2COMP,&nbsp;FIFO</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">, or </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>LIFO</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">)
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Compartment volume (fraction)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Remarks:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">1.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Mixing models include:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Single compartment, complete mix model (<span style="font-family:Courier New; font-size:10pt; color:#000000"><b>MIXED</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">)
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Two-compartment complete mix model (<span style="font-family:Courier New; font-size:10pt; color:#000000"><b>2COMP</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">)
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Plug flow, first in, first out model (<span style="font-family:Courier New; font-size:10pt; color:#000000"><b>FIFO</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">)
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Stacked plug flow, last in, first out model (<span style="font-family:Courier New; font-size:10pt; color:#000000"><b>LIFO</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">)
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The compartment volume parameter only applies to the two-compartment model and represents the fraction of the total tank volume devoted to the inlet/outlet compartment.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">3.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The [MIXING] section is optional. Tanks not described in this section are assumed to be completely mixed.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Example:</b>
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">[MIXING]</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">;Tank&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">;-----------------------</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">T12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIFO</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">T23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2COMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.2</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+</span></span>
+
+</body>
+</html>

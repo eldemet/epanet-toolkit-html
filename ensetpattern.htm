@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>ENsetpattern</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Functions">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>ENsetpattern</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Declaration:</b>
+<br>
+
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="400">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">int  ENsetpattern( int index, float* factors, int nfactors )
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Description:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Sets all of the multiplier factors for a specific time pattern.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Arguments:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>index:</i>
+<br>
+</span></td><td align="left" valign="top" width="327">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">time pattern index
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>factors:</i>
+<br>
+</span></td><td align="left" valign="top" width="327">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">multiplier factors for the entire pattern
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="72">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>nfactors:</i> 
+<br>
+</span></td><td align="left" valign="top" width="327">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">number of factors in the pattern
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Returns:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Returns an error code.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Notes:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Pattern indexes are consecutive integers starting from 1.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><i>factors</i> points to a zero-based array that contains <i>nfactors</i> elements.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Use this function to redefine (and resize) a time pattern all at once; use <a href=ensetpatternvalue.htm>ENsetpatternvalue</a> to revise pattern factors in specific time periods of a pattern.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>See Also:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=engetpatternindex.htm>ENgetpatternindex</a>, <a href=engetpatternlen.htm>ENgetpatternlen</a>, <a href=engetpatternvalue.htm>ENgetpatternvalue</a>, <a href=ensetpatternvalue.htm>ENsetpatternvalue</a>, <a href=enaddpattern.htm>ENaddpattern</a>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table>
+
+</body>
+</html>

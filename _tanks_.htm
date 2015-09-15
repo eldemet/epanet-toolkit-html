@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[TANKS]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[TANKS]
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Defines all tank nodes contained in the network.
+<br>
+
+<br>
+<b>Format:</b>
+<br>
+One line for each tank containing:
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">ID label
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Bottom elevation, ft (m)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Initial water level, ft (m)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Minimum water level, ft (m)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Maximum water level, ft (m)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Nominal diameter, ft (m)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Minimum volume, cubic ft (cubic meters)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Volume curve ID (optional)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Remarks:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">1.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Water surface elevation equals bottom elevation plus water level.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Non-cylindrical tanks can be modeled by specifying a curve of volume versus water depth in the [CURVES] section.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">3.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If a volume curve is supplied the diameter value can be any non-zero number 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">4.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Minimum volume (tank volume at minimum water level) can be zero for a cylindrical tank or if a volume curve is supplied.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">5.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">A network must contain at least one tank or reservoir.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Example:</b>
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">[TANKS]
+<br>
+;ID&nbsp;&nbsp;&nbsp;Elev.&nbsp;&nbsp;InitLvl&nbsp;&nbsp;MinLvl&nbsp;&nbsp;MaxLvl&nbsp;&nbsp;Diam&nbsp;&nbsp;MinVol&nbsp;&nbsp;VolCurve
+<br>
+;-----------------------------------------------------------
+<br>
+;Cylindrical&nbsp;tank
+<br>
+T1&nbsp;&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120&nbsp;&nbsp;&nbsp;0
+<br>
+;Non-cylindrical&nbsp;tank&nbsp;with&nbsp;arbitrary&nbsp;diameter
+<br>
+T2&nbsp;&nbsp;&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VC1&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+</span></span>
+
+</body>
+</html>

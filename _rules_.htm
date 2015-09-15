@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[RULES]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[RULES]
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Defines rule-based controls which modify links based on a combination of conditions.
+<br>
+
+<br>
+<b>Format:</b>
+<br>
+Each rule is a series of statements of the form:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&nbsp;&nbsp;<b>RULE</b>&nbsp;<i>ruleID</i>
+<br>
+<b>&nbsp;&nbsp;IF</b>&nbsp;&nbsp;<i>condition_1</i>
+<br>
+<b>&nbsp;&nbsp;AND</b>&nbsp;<i>condition_2</i>
+<br>
+<b>&nbsp;&nbsp;OR</b>&nbsp;&nbsp;<i>condition_3</i>
+<br>
+<b>&nbsp;&nbsp;AND</b>&nbsp;<i>condition_4</i>
+<br>
+&nbsp;&nbsp;etc.
+<br>
+<b>&nbsp;&nbsp;THEN</b>&nbsp;<i>action_1
+<br>
+</i><b>&nbsp;&nbsp;AND</b>&nbsp;&nbsp;<i>action_2</i>
+<br>
+&nbsp;&nbsp;etc.
+<br>
+<b>&nbsp;&nbsp;ELSE</b>&nbsp;<i>action_3</i>
+<br>
+<b>&nbsp;&nbsp;AND</b>&nbsp;&nbsp;<i>action_4
+<br>
+</i>&nbsp;&nbsp;etc.
+<br>
+<b>&nbsp;&nbsp;PRIORITY</b>&nbsp;<i>value</i></span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+where:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>ruleID</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">an ID label assigned to the rule&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>conditon_n</i>&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a <a href=rule_condition_clauses.htm>condition clause</a>&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>action_n&nbsp;</i>&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">an <a href=rule_action_clauses.htm>action clause</a>&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>priority</i>&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a priority value (e.g., a number from 1 to 5)&nbsp;&nbsp;&nbsp;
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Remarks:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000">1.</span><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Only the <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>RULE</b>,</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>IF</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> and </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>THEN</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> portions of a rule are required; the other portions are optional.</span><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"></span></span></td><td><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000">When mixing </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>AND</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> and </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>OR</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> clauses, the </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>OR</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> operator has higher precedence than </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>AND</b>,</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> i.e.,
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">IF&nbsp;A&nbsp;or&nbsp;B&nbsp;and&nbsp;C</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">is equivalent to
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">IF&nbsp;(A&nbsp;or&nbsp;B)&nbsp;and&nbsp;C</span><span style="font-family:Verdana; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If the interpretation was meant to be
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">IF&nbsp;A&nbsp;or&nbsp;(B&nbsp;and&nbsp;C)</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">then this can be expressed using two rules as in
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">IF&nbsp;A&nbsp;THEN&nbsp;...</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000000">IF&nbsp;B&nbsp;and&nbsp;C&nbsp;THEN&nbsp;...
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:Courier New; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000">3.</span><span style="font-family:Courier New; font-size:10pt; color:#000000"></span></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000">The </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>PRIORITY</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> value is used to determine which rule applies when two or more rules require that conflicting actions be taken on a link. A rule without a priority value always has a lower priority than one with a value. For two rules with the same priority value, the rule that appears first is given the higher priority.</span><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Arial,Helvetica; font-size:10pt; color:#000000"><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Example:</b>
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">[RULES]
+<br>
+RULE&nbsp;1
+<br>
+IF&nbsp;&nbsp;&nbsp;TANK&nbsp;&nbsp;&nbsp;1&nbsp;LEVEL&nbsp;ABOVE&nbsp;19.1
+<br>
+THEN&nbsp;PUMP&nbsp;335&nbsp;STATUS&nbsp;IS&nbsp;CLOSED
+<br>
+AND&nbsp;&nbsp;PIPE&nbsp;330&nbsp;STATUS&nbsp;IS&nbsp;OPEN
+<br>
+RULE&nbsp;2
+<br>
+IF&nbsp;&nbsp;&nbsp;SYSTEM&nbsp;CLOCKTIME&nbsp;&gt;=&nbsp;8&nbsp;AM
+<br>
+AND&nbsp;&nbsp;SYSTEM&nbsp;CLOCKTIME&nbsp;&lt;&nbsp;6&nbsp;PM
+<br>
+AND&nbsp;&nbsp;TANK&nbsp;1&nbsp;LEVEL&nbsp;BELOW&nbsp;12
+<br>
+THEN&nbsp;PUMP&nbsp;335&nbsp;STATUS&nbsp;IS&nbsp;OPEN
+<br>
+RULE&nbsp;3
+<br>
+IF&nbsp;&nbsp;&nbsp;SYSTEM&nbsp;CLOCKTIME&nbsp;&gt;=&nbsp;6&nbsp;PM
+<br>
+OR&nbsp;&nbsp;&nbsp;SYSTEM&nbsp;CLOCKTIME&nbsp;&lt;&nbsp;8&nbsp;AM
+<br>
+AND&nbsp;&nbsp;TANK&nbsp;1&nbsp;LEVEL&nbsp;BELOW&nbsp;14
+<br>
+THEN&nbsp;PUMP&nbsp;335&nbsp;STATUS&nbsp;IS&nbsp;OPEN&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span>
+
+</body>
+</html>

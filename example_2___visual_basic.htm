@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Example 2 - Visual Basic</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>Example 2 - Visual Basic
+<br>
+</b><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+'Add&nbsp;EPANET2.BAS&nbsp;as&nbsp;a&nbsp;code&nbsp;module&nbsp;to&nbsp;your&nbsp;project
+<br>
+
+<br>
+Sub&nbsp;HydrantRating(ByVal&nbsp;MyNode&nbsp;as&nbsp;String,&nbsp;N&nbsp;as&nbsp;Long,_
+<br>
+&nbsp;&nbsp;&nbsp;D()&nbsp;as&nbsp;Single,&nbsp;P()&nbsp;as&nbsp;Single)
+<br>
+
+<br>
+&nbsp;&nbsp;Dim&nbsp;i&nbsp;as&nbsp;Long
+<br>
+&nbsp;&nbsp;Dim&nbsp;nodeindex&nbsp;as&nbsp;Long
+<br>
+&nbsp;&nbsp;Dim&nbsp;t&nbsp;as&nbsp;Long
+<br>
+&nbsp;&nbsp;Dim&nbsp;pressure&nbsp;as&nbsp;Single
+<br>
+
+<br>
+&nbsp;&nbsp;'Open&nbsp;the&nbsp;EPANET&nbsp;toolkit&nbsp;and&nbsp;hydraulics&nbsp;solver
+<br>
+&nbsp;&nbsp;ENopen&nbsp;"example2.inp",&nbsp;"example2.rpt",&nbsp;""
+<br>
+&nbsp;&nbsp;ENopenH
+<br>
+
+<br>
+&nbsp;&nbsp;'Get&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;node&nbsp;of&nbsp;interest
+<br>
+&nbsp;&nbsp;ENgetnodeindex&nbsp;MyNode,&nbsp;nodeindex
+<br>
+
+<br>
+&nbsp;&nbsp;'Iterate&nbsp;over&nbsp;all&nbsp;demands
+<br>
+&nbsp;&nbsp;For&nbsp;i&nbsp;=&nbsp;1&nbsp;to&nbsp;N
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'Set&nbsp;nodal&nbsp;demand,&nbsp;initialize&nbsp;hydraulics,&nbsp;make&nbsp;a
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'single&nbsp;period&nbsp;run,&nbsp;and&nbsp;retrieve&nbsp;pressure
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ENsetnodevalue&nbsp;nodeindex,&nbsp;EN_BASEDEMAND,&nbsp;D(i)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ENinitH&nbsp;0
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ENrunH&nbsp;t
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ENgetnodevalue&nbsp;nodeindex,&nbsp;EN_PRESSURE,&nbsp;pressure
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;P(i)&nbsp;=&nbsp;pressure
+<br>
+&nbsp;&nbsp;Next&nbsp;i
+<br>
+
+<br>
+&nbsp;&nbsp;'Close&nbsp;hydraulics&nbsp;solver&nbsp;&amp;&nbsp;toolkit
+<br>
+&nbsp;&nbsp;ENcloseH
+<br>
+&nbsp;&nbsp;ENclose
+<br>
+End&nbsp;Sub&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span>
+
+</body>
+</html>

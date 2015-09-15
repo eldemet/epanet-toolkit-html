@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>ENgetnodevalue</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Functions">
+<object id=hhctrl_1 type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"><param name="Command" value="ALink"><param name="Window" value="main"><param name="Item1" value=""><param name="Item2" value="$topicid_Units"></object></head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>ENgetnodevalue
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Declaration:</b>
+<br>
+
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="420">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">int  ENgetnodevalue( int index, int paramcode, float* value )
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Description:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Retrieves the value of a specific link parameter.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Arguments:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="98">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>index:</i>
+<br>
+</span></td><td align="left" valign="top" width="215">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">node index
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="98">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>paramcode:</i>
+<br>
+</span></td><td align="left" valign="top" width="215">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">parameter code (see below)
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="98">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><i>value:</i>
+<br>
+</span></td><td align="left" valign="top" width="215">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">parameter value
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Returns:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Returns an error code.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Notes:</b>
+<br>
+
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Node indexes are consecutive integers starting from 1.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Node parameter codes consist of the following constants:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_ELEVATION
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">0
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Elevation
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_BASEDEMAND
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">1
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Base demand
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_PATTERN
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">2
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Demand pattern index
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_EMITTER
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">3
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Emitter coeff.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_INITQUAL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">4
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Initial quality
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_SOURCEQUAL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">5
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Source quality
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_SOURCEPAT
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">6
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Source pattern index
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_SOURCETYPE
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">7
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Source type (See note below)
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_TANKLEVEL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">8
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Initial water level in tank
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_DEMAND
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">9
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Actual demand
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_HEAD
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">10
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Hydraulic head
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_PRESSURE
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">11
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Pressure
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_QUALITY
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">12
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Actual quality
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_SOURCEMASS
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">13
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Mass flow rate per minute of a chemical source 
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The following parameter codes apply only to storage tank nodes:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_INITVOLUME
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">14
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Initial water volume
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MIXMODEL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">15
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Mixing model code (see below)
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MIXZONEVOL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">16
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Inlet/Outlet zone volume in a 2-compartment tank
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_TANKDIAM
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">17
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Tank diameter
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MINVOLUME
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">18
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Minimum water volume
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_VOLCURVE
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">19
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Index of volume versus depth curve (0 if none assigned)
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MINLEVEL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">20
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Minimum water level
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MAXLEVEL
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">21
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Maximum water level
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MIXFRACTION
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">22
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Fraction of total volume occupied by the inlet/outlet zone in a 2-compartment tank
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="152">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_TANK_KBULK
+<br>
+</span></td><td align="left" valign="top" width="34">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">23
+<br>
+</span></td><td align="left" valign="top" width="235">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Bulk reaction rate coefficient
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Parameters 9 - 13 (EN_DEMAND through EN_SOURCEMASS) are computed values. The others are input design parameters.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Source types are identified with the following constants:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="157">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_CONCEN
+<br>
+</span></td><td align="left" valign="top" width="33">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">0
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="157">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MASS
+<br>
+</span></td><td align="left" valign="top" width="33">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">1
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="157">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_SETPOINT
+<br>
+</span></td><td align="left" valign="top" width="33">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">2
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="157">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_FLOWPACED
+<br>
+</span></td><td align="left" valign="top" width="33">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">3
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">See <a href=_sources_.htm>[SOURCES]</a> for a description of these source types.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The codes for the various tank mixing model choices are as follows:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"><table border="0" cellpadding="1" cellspacing="0"><tr><td align="left" valign="top" width="92">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MIX1
+<br>
+</span></td><td align="left" valign="top" width="30">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">0
+<br>
+</span></td><td align="left" valign="top" width="302">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Single compartment, complete mix model
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="92">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_MIX2
+<br>
+</span></td><td align="left" valign="top" width="30">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">1
+<br>
+</span></td><td align="left" valign="top" width="302">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Two-compartment, complete mix model
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="92">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_FIFO
+<br>
+</span></td><td align="left" valign="top" width="30">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">2
+<br>
+</span></td><td align="left" valign="top" width="302">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Plug flow, first in, first out model
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="92">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">EN_LIFO
+<br>
+</span></td><td align="left" valign="top" width="30">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">3
+<br>
+</span></td><td align="left" valign="top" width="302">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">Stacked plug flow, last in, first out model
+<br>
+</span></td></tr></table>
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Values are returned in units which depend on the units used for flow rate in the EPANET input file (see <a href=javascript:hhctrl_1.hhclick()>Units of Measurement</a>).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table>
+
+</body>
+</html>

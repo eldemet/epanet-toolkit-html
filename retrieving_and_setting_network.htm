@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Retrieving and Setting Network Parameters</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Retrieving Network Parameters,Setting Network Parameters">
+
+   <style type="text/css">
+	a:link { color: #002682 }
+	a:hover { color: #FF0000; }
+	a:visited { color: #D63078 }
+   </style>
+
+<!-- This style sheet goes into compiled HTML HELP -->
+   <style type="text/css" media="screen">
+	#nsr
+	 {
+	 padding: 6px 6px 0px 6px;
+	 border-bottom: none;
+	 background: #649CCC;
+	 vertical-align: top;
+	 z-index: 2;
+	 visibility: visible;
+	 left: 0;
+	 top: 0;
+	 position: absolute;
+	 width: 100%;
+	 }
+	#mainbody
+	 {
+	 left: 0;
+	 top: 0px;
+	 margin: 0;
+	 position: absolute;
+	 padding: 10px;
+	 overflow: auto;
+	 height: 100%;
+	 z-index: 1;
+	 background-repeat: no-repeat;
+	 background-position: bottom right;
+	 background-attachment: fixed;
+	 }
+   </style>
+   <style type="text/css" media="print">
+	#nsr
+	 { visibility: none; }
+	#mainbody
+	 { overflow: visible; }
+   </style>
+   <script type="text/javascript" language="JavaScript" src="nonscroll.js"></script>
+
+
+
+</head>
+<body bgcolor="#FFFFFF" 
+ marginheight="0" marginwidth="0" leftmargin="0" topmargin="0"
+ scroll="no"
+>
+
+
+<div id="nsr">
+<table width="100%" border="0" cellspacing="0" cellpadding="2"
+ bgcolor="#649CCC">
+  <tr valign="top">
+    <td align="left">
+      
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#FFFFFF"><b>Retrieving and Setting Network Parameters</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="welcome.htm"
+        onmouseover="document.images.main.src='button_main_h.gif'" 
+  	onmouseout="document.images.main.src='button_main.gif'">
+        <img name=main src="button_main.gif" border=0 alt="Return to Introduction"></a>&nbsp;
+     <a href="opening_and_closing_the_toolki.htm"
+        onmouseover="document.images.prev.src='button_prev_h.gif'" 
+  	onmouseout="document.images.prev.src='button_prev.gif'"><img name=prev src="button_prev.gif" border=0 alt="Previous page"></a>&nbsp;
+     
+
+     <a href="running_a_hydraulic_analysis.htm"
+        onmouseover="document.images.next.src='button_next_h.gif'" 
+  	onmouseout="document.images.next.src='button_next.gif'"><img name=next src="button_next.gif" border=0 alt="Next page"></a>
+     
+     </font>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+<div id="mainbody">
+
+<span style="font-family:Verdana; font-size:10pt; color:#000000">The Toolkit has various functions available for retrieving and setting the parameters that define the design and operation of the pipe network being analyzed. The names of retrieval functions all begin with <i>ENget</i> (e.g., <i>ENgetnodevalue</i>, <i>ENgetoption</i>, etc.) while the functions used for setting parameter values begin with <i>ENset</i> (e.g., <i>ENsetnodevalue</i>, <i>ENsetoption</i>, etc.).
+<br>
+
+<br>
+Most of these functions use an index number to reference a specific network component (such as a node, link, or time pattern). This number is simply the position of the component in the list of all components of similar type (e.g., node 10 is the tenth node, starting from 1, in the network) and is not the same as the ID label assigned to the component in the Input File being processed. A series of functions exist to determine a component's index number given its ID label (see <i>ENgetlinkindex</i>, <i>ENgetnodeindex</i>, and <i>ENgetpatternindex</i>). Likewise, functions exist to retrieve a component's ID label given its index number (see <i>ENgetlinkid</i>, <i>ENgetnodeid</i>, and <i>ENgetpatternid</i>). The <i>ENgetcount </i>function can be used to determine the number of different components in the network.
+<br>
+
+<br>
+The code below is an example of using the parameter retrieval and setting functions. It changes all pipes with diameter of 10 inches to 12 inches.
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">int&nbsp;&nbsp;&nbsp;i,&nbsp;Nlinks;
+<br>
+float&nbsp;D;
+<br>
+ENgetcount(EN_LINKCOUNT,&nbsp;&amp;Nlinks);
+<br>
+for&nbsp;(i&nbsp;=&nbsp;1;&nbsp;i&nbsp;&lt;=&nbsp;Nlinks;&nbsp;i++)&nbsp;{
+<br>
+&nbsp;&nbsp;ENgetlinkvalue(i,&nbsp;EN_DIAMETER,&nbsp;&amp;D);
+<br>
+&nbsp;&nbsp;if&nbsp;(D&nbsp;==&nbsp;10)&nbsp;ENsetlinkvalue(i,&nbsp;EN_DIAMETER,&nbsp;12);
+<br>
+}</span><span style="font-family:Verdana; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+</span></span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[STATUS]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[STATUS]</b></span><span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Defines initial status of selected links at the start of a simulation.
+<br>
+
+<br>
+<b>Format:</b>
+<br>
+One line per link being controlled containing:
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Link ID label
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000"><font face="Symbol">&#183;</font></span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Status or setting
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Remarks:</b>
+<br>
+</span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">1.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Links not listed in this section have a default status of <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>OPEN</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (for pipes and pumps) or </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>ACTIVE</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> (for valves).
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The Status value assigned in this section can be <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>OPEN</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> or </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>CLOSED.</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> For control valves (e.g., PRVs, FCVs, etc.) this means that the valve is either fully opened or closed, not active at its control setting.
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">3.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The Setting value can be a speed setting for pumps or valve setting for valves.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">4.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">The initial status of pipes can also be set in the [PIPES] section.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">5.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Check valves cannot have their status be preset.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">6.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Use [CONTROLS] or [RULES] to change status or setting at some future point in the simulation.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">7.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">If a <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>CLOSED</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> or </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>OPEN</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> control valve is to become ACTIVE again, then its pressure or flow setting must be specified in the control or rule that reactivates it.
+&nbsp;<br>
+</span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Example:</b>
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">[STATUS]
+<br>
+;&nbsp;Link&nbsp;&nbsp;&nbsp;Status/Setting
+<br>
+;----------------------
+<br>
+&nbsp;&nbsp;L22&nbsp;&nbsp;&nbsp;&nbsp;CLOSED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Link&nbsp;L22&nbsp;is&nbsp;closed
+<br>
+&nbsp;&nbsp;P14&nbsp;&nbsp;&nbsp;&nbsp;1.5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Speed&nbsp;for&nbsp;pump&nbsp;P14
+<br>
+&nbsp;&nbsp;PRV1&nbsp;&nbsp;&nbsp;OPEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;PRV1&nbsp;forced&nbsp;open
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;(overrides&nbsp;normal&nbsp;operation)&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+</b>
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span>
+
+</body>
+</html>

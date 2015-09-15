@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>Example 2 - Pascal</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><b>Example 2 - Pascal
+<br>
+</b><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+uses&nbsp;epanet2;&nbsp;{Import&nbsp;unit&nbsp;supplied&nbsp;with&nbsp;Toolkit}
+<br>
+
+<br>
+procedure&nbsp;HydrantRating(MyNode:&nbsp;PChar;&nbsp;N:&nbsp;Integer;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;D:&nbsp;array&nbsp;of&nbsp;Single;&nbsp;var&nbsp;P:&nbsp;array&nbsp;of&nbsp;Single);
+<br>
+
+<br>
+var
+<br>
+<b>&nbsp;</b>&nbsp;&nbsp;i,&nbsp;nodeindex:&nbsp;Integer;
+<br>
+&nbsp;&nbsp;&nbsp;t:&nbsp;LongInt;
+<br>
+&nbsp;&nbsp;&nbsp;pressure:&nbsp;Single;
+<br>
+
+<br>
+begin
+<br>
+{&nbsp;Open&nbsp;the&nbsp;EPANET&nbsp;toolkit&nbsp;&amp;&nbsp;hydraulics&nbsp;solver&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;ENopen('example2.inp',&nbsp;'example2.rpt',&nbsp;'');
+<br>
+&nbsp;&nbsp;&nbsp;ENopenH();
+<br>
+
+<br>
+{&nbsp;Get&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;node&nbsp;of&nbsp;interest&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;ENgetnodeindex(MyNode,&nbsp;nodeindex);
+<br>
+
+<br>
+{&nbsp;Iterate&nbsp;over&nbsp;all&nbsp;demands&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;for&nbsp;i&nbsp;:=&nbsp;1&nbsp;to&nbsp;N&nbsp;do
+<br>
+&nbsp;&nbsp;&nbsp;begin
+<br>
+&nbsp;&nbsp;&nbsp;{&nbsp;Set&nbsp;nodal&nbsp;demand,&nbsp;initialize&nbsp;hydraulics,&nbsp;make&nbsp;a&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;{&nbsp;single&nbsp;period&nbsp;run,&nbsp;and&nbsp;retrieve&nbsp;pressure&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENsetnodevalue(nodeindex,&nbsp;EN_BASEDEMAND,&nbsp;D[i]);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENinitH(0);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENrunH(t);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENgetnodevalue(nodeindex,&nbsp;EN_PRESSURE,&nbsp;pressure);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P[i]&nbsp;:=&nbsp;pressure;
+<br>
+&nbsp;&nbsp;&nbsp;end;
+<br>
+
+<br>
+{&nbsp;Close&nbsp;hydraulics&nbsp;solver&nbsp;&amp;&nbsp;toolkit&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;ENcloseH();
+<br>
+&nbsp;&nbsp;&nbsp;ENclose();
+<br>
+end;&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span>
+
+</body>
+</html>

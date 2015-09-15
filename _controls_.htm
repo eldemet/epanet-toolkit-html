@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+   <title>[CONTROLS]</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+
+<body bgcolor="#FFFFFF">
+
+
+
+
+<span style="font-family:Arial,Helvetica; font-size:12pt; color:#000000"><span style="font-family:Arial,Helvetica; font-size:12pt; color:#0000FF"><b>[CONTROLS]
+<br>
+</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>
+<br>
+Purpose:</b>
+<br>
+Defines simple controls that modify links based on a single condition.
+<br>
+
+<br>
+<b>Format:</b>
+<br>
+One line for each control which can be of the form:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;LINK</b>&nbsp;<i>linkID&nbsp;status</i>&nbsp;<b>IF&nbsp;NODE</b>&nbsp;<i>nodeID</i>&nbsp;<b>ABOVE/BELOW</b>&nbsp;<i>value</i>
+<br>
+<b>&nbsp;&nbsp;LINK</b>&nbsp;<i>linkID&nbsp;status</i>&nbsp;<b>AT&nbsp;TIME</b>&nbsp;<i>time</i>
+<br>
+<b>&nbsp;&nbsp;LINK</b>&nbsp;<i>linkID&nbsp;status</i>&nbsp;<b>AT&nbsp;CLOCKTIME</b>&nbsp;<i>clocktime&nbsp;</i><b>AM/PM</b>&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">where:</span><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+<i>linkID</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a link ID label&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>status</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<b>OPEN</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> or </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>CLOSED</b></span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>,</b> a pump speed setting, or a control valve setting&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>nodeID</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a node ID label&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>value</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a pressure for a junction or a water level for a tank&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>time</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a time since the start of the simulation in hours&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>clocktime</i>&nbsp;&nbsp;=&nbsp;</span><span style="font-family:Verdana; font-size:10pt; color:#000000">a 24-hour clock time (hrs:min)&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+<b>Remarks:</b>
+<br>
+</span></span><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">1.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">Simple controls are used to change link status or settings based on tank water level, junction pressure, time into the simulation or time of day.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"><span style="font-family:Verdana; font-size:10pt; color:#000000">2.</span></td><td><span style="font-family:Verdana; font-size:10pt; color:#000000">See the notes for the <a href=_status_.htm>[STATUS]</a> section for conventions used in specifying link status and setting, particularly for control valves.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:Verdana; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+<b>Examples:</b>
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">[CONTROLS]
+<br>
+;Close&nbsp;Link&nbsp;12&nbsp;if&nbsp;the&nbsp;level&nbsp;in&nbsp;Tank&nbsp;23&nbsp;exceeds&nbsp;20&nbsp;ft.
+<br>
+LINK&nbsp;12&nbsp;CLOSED&nbsp;IF&nbsp;NODE&nbsp;23&nbsp;ABOVE&nbsp;20&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+;Open&nbsp;Link&nbsp;12&nbsp;if&nbsp;the&nbsp;pressure&nbsp;at&nbsp;Node&nbsp;130&nbsp;is&nbsp;under&nbsp;30&nbsp;psi
+<br>
+LINK&nbsp;12&nbsp;OPEN&nbsp;IF&nbsp;NODE&nbsp;130&nbsp;BELOW&nbsp;30&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+;Pump&nbsp;PUMP02's&nbsp;speed&nbsp;is&nbsp;set&nbsp;to&nbsp;1.5&nbsp;at&nbsp;16&nbsp;hours&nbsp;into
+<br>
+;the&nbsp;simulation
+<br>
+LINK&nbsp;PUMP02&nbsp;1.5&nbsp;AT&nbsp;TIME&nbsp;16&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>&nbsp;&nbsp;&nbsp;
+<br>
+</b></span><span style="font-family:Courier New; font-size:10pt; color:#000000">;Link&nbsp;12&nbsp;is&nbsp;closed&nbsp;at&nbsp;10&nbsp;am&nbsp;and&nbsp;opened&nbsp;at&nbsp;8&nbsp;pm
+<br>
+;throughout&nbsp;the&nbsp;simulation
+<br>
+LINK&nbsp;12&nbsp;CLOSED&nbsp;AT&nbsp;CLOCKTIME&nbsp;10&nbsp;AM
+<br>
+LINK&nbsp;12&nbsp;OPEN&nbsp;AT&nbsp;CLOCKTIME&nbsp;8&nbsp;PM&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;
+<br>
+</span></span>
+
+</body>
+</html>
